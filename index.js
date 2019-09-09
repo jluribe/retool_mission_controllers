@@ -25,7 +25,8 @@
     name,
     description = '',
     position,
-    stageId
+    stageId,
+    defaultThumbUrl
   }) {
     return {
       id: uuid.v4(),

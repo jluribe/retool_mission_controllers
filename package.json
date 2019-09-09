@@ -1,0 +1,19 @@
+{
+  "name": "retool_mission_controllers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jluribe/retool_mission_controllers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jluribe/retool_mission_controllers/issues"
+  },
+  "homepage": "https://github.com/jluribe/retool_mission_controllers#readme"
+}

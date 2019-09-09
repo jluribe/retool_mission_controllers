@@ -1,12 +1,6 @@
 (function(root, factory) {
-  console.log(
-    'retool_script - init retool scritp - root',
-    JSON.stringify(root)
-  );
-  console.log(
-    'retool_script - init retool scritp - factory',
-    JSON.stringify(factory)
-  );
+  console.log('retool_script - init retool scritp - root', root);
+  console.log('retool_script - init retool scritp - factory', factory);
   // Support CommonJS
   if (typeof exports === 'object') {
     console.log('retool_script - retool scritp start exports object');

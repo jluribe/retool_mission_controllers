@@ -1,26 +1,32 @@
 (function(root, factory) {
+  console.log('init retool scritp');
   // Support CommonJS
   if (typeof exports === 'object') {
-    var buildStep = factory();
+    console.log('retool scritp start exports object');
+    var missionBuildStep = factory();
 
     // Support NodeJS & Component, which allow module.exports to be a function
     if (typeof module === 'object' && module && module.exports) {
-      exports = module.exports = buildStep;
+      console.log('retool scritp start module object');
+      exports = module.exports = missionBuildStep;
     }
 
     // Support CommonJS 1.1.1 spec
-    exports.buildStep = buildStep;
+    exports.missionBuildStep = missionBuildStep;
 
     // Support AMD
   } else if (typeof define === 'function' && define.amd) {
+    console.log('retool scritp start define function');
     define([], factory);
 
     // Support vanilla script loading
   } else {
-    root.buildStep = factory();
+    console.log('retool scritp start root');
+    root.missionBuildStep = factory();
   }
+  console.log('end retool scritp');
 })(this, function() {
-  var buildStep = function({
+  var missionBuildStep = function({
     elementId,
     name,
     description = '',
@@ -51,5 +57,5 @@
     };
   };
 
-  return buildStep;
+  return missionBuildStep;
 });

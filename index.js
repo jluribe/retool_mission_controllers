@@ -36,67 +36,7 @@
   var colorRanges = [];
 
   var randomColor = function(options) {
-    options = options || {};
-
-    // Check if there is a seed and ensure it's an
-    // integer. Otherwise, reset the seed value.
-    if (
-      options.seed !== undefined &&
-      options.seed !== null &&
-      options.seed === parseInt(options.seed, 10)
-    ) {
-      seed = options.seed;
-
-      // A string was passed as a seed
-    } else if (typeof options.seed === 'string') {
-      seed = stringToInteger(options.seed);
-
-      // Something was passed as a seed but it wasn't an integer or string
-    } else if (options.seed !== undefined && options.seed !== null) {
-      throw new TypeError('The seed value must be an integer or string');
-
-      // No seed, reset the value outside.
-    } else {
-      seed = null;
-    }
-
-    var H, S, B;
-
-    // Check if we need to generate multiple colors
-    if (options.count !== null && options.count !== undefined) {
-      var totalColors = options.count,
-        colors = [];
-      // Value false at index i means the range i is not taken yet.
-      for (var i = 0; i < options.count; i++) {
-        colorRanges.push(false);
-      }
-      options.count = null;
-
-      while (totalColors > colors.length) {
-        // Since we're generating multiple colors,
-        // incremement the seed. Otherwise we'd just
-        // generate the same color each time...
-        if (seed && options.seed) options.seed += 1;
-
-        colors.push(randomColor(options));
-      }
-
-      options.count = totalColors;
-
-      return colors;
-    }
-
-    // First we pick a hue (H)
-    H = pickHue(options);
-
-    // Then use H to determine saturation (S)
-    S = pickSaturation(H, options);
-
-    // Then use S and H to determine brightness (B).
-    B = pickBrightness(H, S, options);
-
-    // Then we return the HSB color in the desired format
-    return setFormat([H, S, B], options);
+    return 'mission controller v1';
   };
 
   function pickHue(options) {
